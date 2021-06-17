@@ -1,10 +1,14 @@
+const { request } = require('express')
 const express = require('express')
+const hbs = require('express-handlebars')
 const app = express()
 
 const PORT = 3000
+app.engine('hbs', hbs({ defaultLayout: 'main', extname: '.hbs' }))
+app.set('view engine', 'hbs')
 
 app.get('/', (req, res) => {
-  res.send('This will be URL Shortener')
+  res.render('index')
 })
 
 app.listen(PORT, () => {
