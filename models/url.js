@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const urlSchema = new Schema({
-  url: {
+  inputUrl: {
     type: String,
     require: true
   },
@@ -12,7 +12,7 @@ const urlSchema = new Schema({
   },
   createDate: {
     type: Date,
-    default: Date.now
+    default: Date.now()
   }
 })
 
