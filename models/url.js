@@ -4,11 +4,13 @@ const Schema = mongoose.Schema
 const urlSchema = new Schema({
   inputUrl: {
     type: String,
-    require: true
+    require: true,
+    unique: true
   },
   shortUrl: {
     type: String,
-    require: true
+    require: true,
+    unique: true
   },
   createDate: {
     type: Date,
